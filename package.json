@@ -2,6 +2,7 @@
   "name": "pedidosapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://arnoldoJose.github.io/deliveryapp",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -19,6 +20,8 @@
     "sweetalert2": "^10.3.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "hg-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
