@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 import CardsFood from '../ComponentFood/CardsFood';
 import Swal from 'sweetalert2';
 import Search from '../../Search';
-
+import Axios from 'axios';
  const Food = ({location}) => {
 
   let [datos,guardarDatos] = useState([]);
@@ -16,9 +16,11 @@ import Search from '../../Search';
   useEffect(() => {
     //pasar a la carpeta hooks los effect
     let consultarAPI = async () => {      
-      let os = await fetch(`${process.env.REACT_APP_BACKEND_DELIVERY}/product/all?categoria=${categoria}`);
-      let data = await os.json();
-      guardarDatos(data);
+      let data = await Axios.get(
+        `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
+      );
+      console.log(data);
+    
     }
     consultarAPI();
   }, [categoria]);
