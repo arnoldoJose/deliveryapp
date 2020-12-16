@@ -16,17 +16,11 @@ import Search from '../../Search';
   useEffect(() => {
     //pasar a la carpeta hooks los effect
     let consultarAPI = async () => {      
-      let data = await clienteAxios.get(`/product/all?categoria=${categoria}`);
-      guardarDatos(data)
-    }
-    let consultarProduction = async() => {
-      let res = await fetch(`${process.env.REACT_APP_BACKEND_DELIVERY}/product/all?categoria=${categoria}`);
-      let response = await res.json();
-
-      console.log(response);
+      let os = await fetch(`${process.env.REACT_APP_BACKEND_DELIVERY}/product/all?categoria=${categoria}`);
+      let data = await os.json();
+      guardarDatos(data);
     }
     consultarAPI();
-    consultarProduction();
   }, [categoria]);
 
   let consultarOrden = async () => {
