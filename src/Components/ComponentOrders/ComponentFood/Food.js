@@ -19,7 +19,14 @@ import Search from '../../Search';
       let data = await clienteAxios.get(`/product/all?categoria=${categoria}`);
       guardarDatos(data)
     }
+    let consultarProduction = async() => {
+      let res = await fetch(`${process.env.REACT_APP_BACKEND_DELIVERY}/product/all?categoria=${categoria}`);
+      let response = await res.json();
+
+      console.log(response);
+    }
     consultarAPI();
+    consultarProduction();
   }, [categoria]);
 
   let consultarOrden = async () => {
