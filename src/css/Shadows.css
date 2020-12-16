@@ -1,0 +1,137 @@
+
+.izbtn {
+  display: none;
+}
+
+.rg{
+  box-shadow: 0px 19px 29px 0px rgba(146, 133, 133, 0.5);
+}
+
+.foco{
+  border-bottom: 3px solid rgb(51, 156, 125);;
+}
+.red{
+   border-bottom: 3px solid red;
+}
+
+.txt-font{
+  font-family: 'Vidaloka', serif;
+  color: black;
+}
+
+.txt-font:hover{
+  color: black;
+  text-decoration: none;
+
+}
+
+.txt-des{
+  font-family: 'Timmana', sans-serif;
+  font-size: 1.3em;
+  color: black;
+}
+
+
+.card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card .mago {
+      height: 101%;
+      width: 50%;
+      left: 0%;
+      margin: 0px;
+      z-index: 9;
+      top: -1px;
+      border-radius: 10px;
+    background: #70a0b3; 
+      background: -webkit-linear-gradient(to left, #34e89e,#0f3443);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right ,#356a80,#3b758b);
+      animation:izdesplazo 0.5s ;
+      position: absolute;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      -webkit-animation:izdesplazo 0.5s ;
+}
+
+
+/* @media screen and (max-width: 900px){
+ 
+} */
+
+ .card .activada {
+     height: 101%;
+     width: 50%;
+     right: 0px;
+     border-radius: 10px;
+     margin: 0px;
+     z-index: 9;
+     top: -1px;
+     animation: desplaso 0.5s ;
+      background: #70a0b3; 
+      background: -webkit-linear-gradient(to left, #34e89e,#0f3443);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right ,#356a80,#3b758b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     position: absolute;
+     -webkit-animation: desplaso 0.5s ;
+}
+
+@keyframes desplaso {
+
+  from{
+    right: 50%;
+    width: 50%;
+  }
+  to{
+    right: 0%;
+    width: 50%;
+  }
+}
+
+@keyframes izdesplazo {
+  from{
+    left: 50%;
+    width: 50%;
+  }
+  to{
+    left: 0%;
+    width: 50%;
+  }
+
+}
+
+
+.txt-sesion{
+  display: none;
+}
+
+
+.visible {
+  display: none;
+}
+
+
+@media screen and (max-width: 424px) {
+  .list-li > li{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+}
+
+.list-li > li > .btn-comparas{
+  position: relative;
+  top: 1.2em;
+}
+
+}
