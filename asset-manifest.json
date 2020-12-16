@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/deliveryapp/static/css/main.1f6007d9.chunk.css",
+    "main.js": "/deliveryapp/static/js/main.d805ce5f.chunk.js",
+    "main.js.map": "/deliveryapp/static/js/main.d805ce5f.chunk.js.map",
+    "runtime-main.js": "/deliveryapp/static/js/runtime-main.de52d614.js",
+    "runtime-main.js.map": "/deliveryapp/static/js/runtime-main.de52d614.js.map",
+    "static/css/2.10f67862.chunk.css": "/deliveryapp/static/css/2.10f67862.chunk.css",
+    "static/js/2.82f2f8ed.chunk.js": "/deliveryapp/static/js/2.82f2f8ed.chunk.js",
+    "static/js/2.82f2f8ed.chunk.js.map": "/deliveryapp/static/js/2.82f2f8ed.chunk.js.map",
+    "index.html": "/deliveryapp/index.html",
+    "static/css/2.10f67862.chunk.css.map": "/deliveryapp/static/css/2.10f67862.chunk.css.map",
+    "static/css/main.1f6007d9.chunk.css.map": "/deliveryapp/static/css/main.1f6007d9.chunk.css.map",
+    "static/js/2.82f2f8ed.chunk.js.LICENSE.txt": "/deliveryapp/static/js/2.82f2f8ed.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/deliveryapp/static/media/dely.104b161a.jpg",
+    "static/media/novisible.9e33846f.svg": "/deliveryapp/static/media/novisible.9e33846f.svg",
+    "static/media/scooter.070672fc.svg": "/deliveryapp/static/media/scooter.070672fc.svg",
+    "static/media/simbolo-de-menu-de-tres-lineas-paralelas.791e603f.svg": "/deliveryapp/static/media/simbolo-de-menu-de-tres-lineas-paralelas.791e603f.svg",
+    "static/media/slick-theme.css": "/deliveryapp/static/media/slick.c94f7671.ttf",
+    "static/media/usuario.672e3695.svg": "/deliveryapp/static/media/usuario.672e3695.svg",
+    "static/media/visibilidad.ced99001.svg": "/deliveryapp/static/media/visibilidad.ced99001.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de52d614.js",
+    "static/css/2.10f67862.chunk.css",
+    "static/js/2.82f2f8ed.chunk.js",
+    "static/css/main.1f6007d9.chunk.css",
+    "static/js/main.d805ce5f.chunk.js"
+  ]
+}
