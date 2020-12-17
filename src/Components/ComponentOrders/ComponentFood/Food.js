@@ -19,7 +19,7 @@ import Axios from 'axios';
       let data = await Axios.get(
         `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
       );
-      console.log(data);
+    guardarDatos(data);
     
     }
     consultarAPI();
