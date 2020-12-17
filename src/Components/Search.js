@@ -21,7 +21,7 @@ const Search = ({ guardarOrden, consultarOrden,location}) => {
   return (
     <div className="container-search col-sm-12 col-md-9 col-lg-9 mx-auto">
       <div className="form-group d-flex m-3">
-        <input type="text" name="name" placeholder={`${holderName}`} className="form-control mr-1" onChange={e => guardarOrden(e.target.value)} />
+        <input type="text" name="name" placeholder={`${holderName}`} className="form-control mx-3" onChange={e => guardarOrden(e.target.value)} />
         <input type="button" value="Buscar" className="btn btn-warning" onClick={() => consultarOrden()}/>
       </div>
     </div>
