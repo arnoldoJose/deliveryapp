@@ -1,13 +1,15 @@
-import React, {useEffect,useState} from 'react'
+import React, {useEffect,useState,useContext} from 'react'
 import Spinner from '../Spinner';
 import {withRouter} from 'react-router-dom';
 import CardsFood from '../ComponentFood/CardsFood';
 import Swal from 'sweetalert2';
 import Search from '../../Search';
-// import Axios from 'axios';
+import Axios from 'axios';
+import { CRMENVProduction } from "../../../Middleware/EnviPorduction";
 import clienteAxios from '../../../Config/axios';
  const Food = ({location}) => {
 
+  let { envidev } = useContext(CRMENVProduction);
   let [datos,guardarDatos] = useState([]);
   const [orden, guardarOrden] = useState("");
 
@@ -16,14 +18,14 @@ import clienteAxios from '../../../Config/axios';
   useEffect(() => {
     //pasar a la carpeta hooks los effect
     let consultarAPI = async () => {      
-      let data = await clienteAxios.get(`/product/all?categoria=${categoria}`);
+      let data = await Axios.get(`${envidev}/product/all?categoria=${categoria}`);
     guardarDatos(data);
     //  Axios.get(
     //    `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
     //  );
     }
     consultarAPI();
-  }, [categoria]);
+  }, [categoria,envidev]);
 
   let consultarOrden = async () => {
      let res = await clienteAxios.get(`/obtener/orden?name=${orden}&categoria=${categoria}`);
