@@ -1,11 +1,11 @@
 import React, {useEffect,useState} from 'react'
-import clienteAxios from '../../../Config/axios';
 import Spinner from '../Spinner';
 import {withRouter} from 'react-router-dom';
 import CardsFood from '../ComponentFood/CardsFood';
 import Swal from 'sweetalert2';
 import Search from '../../Search';
-import Axios from 'axios';
+// import Axios from 'axios';
+import clienteAxios from '../../../Config/axios';
  const Food = ({location}) => {
 
   let [datos,guardarDatos] = useState([]);
@@ -15,13 +15,12 @@ import Axios from 'axios';
 
   useEffect(() => {
     //pasar a la carpeta hooks los effect
-    console.log(clienteAxios);
     let consultarAPI = async () => {      
-      let data = await Axios.get(
-        `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
-      );
+      let data = await clienteAxios.get(`/product/all?categoria=${categoria}`);
     guardarDatos(data);
-    
+    //  Axios.get(
+    //    `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
+    //  );
     }
     consultarAPI();
   }, [categoria]);
