@@ -15,6 +15,7 @@ import Axios from 'axios';
 
   useEffect(() => {
     //pasar a la carpeta hooks los effect
+    console.log(clienteAxios);
     let consultarAPI = async () => {      
       let data = await Axios.get(
         `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
