@@ -11,7 +11,7 @@ const CardsFood = ({data}) => {
           <p>{data.name}</p>
   <label htmlFor="" className="d-flex">Precio: C$<p>{data.precio}</p></label>
         </div>
-      <div className="card-footer mx-auto">
+      <div className="card-footer ">
         <Link to={`/find-product/${data._id}`} style={{width: 12+"em"}} className="btn btn-warning">Ver Producto</Link>
       </div>
       </div>
