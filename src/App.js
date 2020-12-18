@@ -25,7 +25,7 @@ function App() {
           <div className="contenedorSupremo">
             <Nav />
             <Switch>
-              <Route exact path="/" component={Menu} />
+              <Route exact path="/deliveryapp" component={Menu} />
               <Route exact path="/user-login" component={Register} />
               <Route exact path="/food" component={Food} />
               <Route exact path="/various" component={Various} />
