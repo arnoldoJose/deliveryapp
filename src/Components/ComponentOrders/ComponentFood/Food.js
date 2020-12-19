@@ -46,7 +46,7 @@ import clienteAxios from '../../../Config/axios';
    ) : (
      <div>
        <Search guardarOrden={guardarOrden} consultarOrden={consultarOrden} />
-       <h1>CATEGORIA DE COMIDAS</h1>
+       <h1 className="text-center">CATEGORIA DE COMIDAS</h1>
        <div className="col-12 row p-5">
          {datos.data.map((item) => (
            <CardsFood key={item._id} data={item} />
