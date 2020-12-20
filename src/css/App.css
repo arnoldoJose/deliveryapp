@@ -7,6 +7,7 @@ main .container-img {
   width: 100%;
   min-height: 60em;
   background: url("../svg/dely.jpg") no-repeat center fixed;
+
  background-attachment: scroll;
   background-size: 100% 100%;
 }
@@ -25,6 +26,9 @@ background: linear-gradient(to right, #f7fa4b , #f7fa4b); /* W3C, IE 10+/ Edge, 
 
 }
 
+.navbar-nav > li > a {
+  text-decoration: none;
+}
 
 .contenedor-x p{
   display: none;

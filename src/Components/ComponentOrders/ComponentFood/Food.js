@@ -19,14 +19,13 @@ import clienteAxios from '../../../Config/axios';
     //pasar a la carpeta hooks los effect
     let consultarAPI = async () => {      
       let data = await Axios.get(`${envidev}/product/all?categoria=${categoria}`);
-    guardarDatos(data);
-    //  Axios.get(
-    //    `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
-    //  );
-    }
-    consultarAPI();
-  }, [categoria,envidev]);
 
+    guardarDatos(data);
+   
+  }
+  consultarAPI();
+  }, [categoria,envidev]);
+  
   let consultarOrden = async () => {
      let res = await clienteAxios.get(`/obtener/orden?name=${orden}&categoria=${categoria}`);
     if(res.data.message){
@@ -41,9 +40,9 @@ import clienteAxios from '../../../Config/axios';
     }
   }
 
-   return !datos.data ? (
+  return !datos.data ? (
      <Spinner />
-   ) : (
+     ) : (
      <div>
        <Search guardarOrden={guardarOrden} consultarOrden={consultarOrden} />
        <h1 className="text-center">CATEGORIA DE COMIDAS</h1>
@@ -56,3 +55,6 @@ import clienteAxios from '../../../Config/axios';
    );
 }
 export default withRouter(Food);
+     //  Axios.get(
+     //    `https://blooming-scrubland-19789.herokuapp.com/product/all?categoria=${categoria}`
+     //  );

@@ -9,16 +9,15 @@ import '../css/Shadows.css';
 
 import {ocultar,aparece} from '../Components/eventosNav';
 
-
-
 const Nav = () => {
   
   return (
+
     <Fragment>
       <header className=" d-flex justify-content-between">
         <div className="menu-bar col-sm-12 col-md-11 col-lg-7 d-flex justify-content-between">
           <div className="contenedorImg ml-3">
-            <Link to={"/"} title="volver al inicio">
+          <Link to={"/deliveryapp"} title="volver al inicio">
               <img src={scooter} height="60" width="75" alt="" />
             </Link>
           </div>
@@ -50,7 +49,7 @@ const Nav = () => {
             <p onClick={aparece}>X</p>
           </div>
           <ul className=" navbar-nav ml-auto">
-            <li className=" m-2">
+            <li className="m-2">
               {" "}
               <NavLink to="/user-login" onClick={ocultar} className="txt-font">
                 Iniciar Sesion
