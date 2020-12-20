@@ -83,7 +83,7 @@ const Menu = ({history}) => {
               className="col-sm-8 col-md-4 col-lg-4 mx-auto cd-img"
               data-categories="food"
             >
-              <StyledH3 name="Ordena Tu Comida Favorita" />
+              <StyledH3 name="Ordena Tu Comida Favorita" className="text-center"/>
               <div className="card" onClick={verifiCategorie}>
                 <picture>
                   <img
