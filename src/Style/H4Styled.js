@@ -10,7 +10,7 @@ import styled from "styled-components";
    text-shadow: 2px 2px 2px rgba(5,5,5,0.5);
  `;
 
-const H4Styled = ({name}) =>  (<StyledH3>{name}</StyledH3>)
+const H4Styled = ({name}) =>  (<StyledH3 className="text-center">{name}</StyledH3>)
 
 
 export default H4Styled
