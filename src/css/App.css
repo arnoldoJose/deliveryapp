@@ -289,9 +289,3 @@ opacity: .85;
   background-color: rgb(53, 47, 47);
  
 }
-
-@media screen and (max-width: 1111px){
-  .alin{
-    font-size: 0.5em;
-  }
-}

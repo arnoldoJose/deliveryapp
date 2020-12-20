@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 
  const StyledH3 = styled.h3`
-   position: absolute;
+   position: relative;
+   top: 3em;
    z-index: 9;
    margin-left: 1em;
    color: #ffff;
