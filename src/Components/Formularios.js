@@ -43,7 +43,7 @@ const Formularios = ({history}) => {
       if(rol === "ADMIN_ROLE"){
         history.push("/add-data-article");
       }else{
-        history.push("/");
+        history.push("/deliveryapp");
       }
     
     } catch (error) {
