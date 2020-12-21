@@ -1,11 +1,16 @@
 import React, {useState,useContext} from 'react'
-import clienteAxios from '../../Config/axios';
+
 import {CRMContext} from '../../Middleware/Auth';
 import Swal from 'sweetalert2';
+import Axios from 'axios';
+
+import { CRMENVProduction } from "../../Middleware/EnviPorduction";
 
 const FormDatos = ({history}) => {
 
   const{ auth} = useContext(CRMContext);
+    let { envidev } = useContext(CRMENVProduction);
+ 
 
   const [img,guardarImg] = useState("");
   const [name,saveName] = useState("");
@@ -23,7 +28,7 @@ const FormDatos = ({history}) => {
     fd.append("precio", precio);
     fd.append("categoria", categotia);
   
-    let data = await clienteAxios.post("/add-product", fd, {
+    let data = await Axios.post(`${envidev}/add-product`, fd, {
       headers: { Authorization: `Bearer ${auth.token}` },});
     
     if(data.data.rol !== "ADMIN_ROLE"){
