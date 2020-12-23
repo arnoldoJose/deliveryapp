@@ -32,14 +32,13 @@ const FormDatos = ({history}) => {
       headers: { Authorization: `Bearer ${auth.token}` },});
     
     if(data.data.rol !== "ADMIN_ROLE"){
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: `${data.data.message}`,
-      });
-      return;
-    }
-    document.querySelector(".frm").reset();
+        Swal.fire({icon: "error",
+          title: "Oops...",
+          text: `${data.data.message}`,});
+       document.querySelector(".frm").reset();
+        return;
+      }
+      document.querySelector(".frm").reset();
   };
 
   if(!auth.auth || rol !== "ADMIN_ROLE") history.push("/");
