@@ -17,7 +17,7 @@ const FormDatos = ({history}) => {
   const [precio,savePrecio] = useState("");
   const [categotia,saveCategoria] = useState("");
   
-  let {rol} = auth.user;
+  // let {rol} = auth.user;
 
   let handelSubmit = async(e) => {
     e.preventDefault();
@@ -30,8 +30,7 @@ const FormDatos = ({history}) => {
   
     try {
       
-      await Axios.post(`${envidev}/add-product`, fd, {
-       headers: { Authorization: `Bearer ${auth.token}` },});
+      await Axios.post(`${envidev}/add-product`, fd);
        document.querySelector(".frm").reset();  
      
       } catch (error) {
@@ -48,7 +47,7 @@ const FormDatos = ({history}) => {
       }
   };
 
-  if(!auth.auth || rol !== "ADMIN_ROLE") history.push("/");
+  if(!auth.auth) history.push("/");
   
   return (
     <div className="col-12 mt-5">
