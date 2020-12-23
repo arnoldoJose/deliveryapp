@@ -28,17 +28,24 @@ const FormDatos = ({history}) => {
     fd.append("precio", precio);
     fd.append("categoria", categotia);
   
-    let data = await Axios.post(`${envidev}/add-product`, fd, {
-      headers: { Authorization: `Bearer ${auth.token}` },});
-    
-    if(data.data.rol !== "ADMIN_ROLE"){
-        Swal.fire({icon: "error",
-          title: "Oops...",
-          text: `${data.data.message}`,});
-       document.querySelector(".frm").reset();
-        return;
+    try {
+      
+      await Axios.post(`${envidev}/add-product`, fd, {
+       headers: { Authorization: `Bearer ${auth.token}` },});
+       document.querySelector(".frm").reset();  
+     
+      } catch (error) {
+
+        if(error){
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: `${error.response.data.message}`,
+            });
+            document.querySelector(".frm").reset();
+            return;
+        }
       }
-      document.querySelector(".frm").reset();
   };
 
   if(!auth.auth || rol !== "ADMIN_ROLE") history.push("/");
