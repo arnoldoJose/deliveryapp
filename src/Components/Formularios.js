@@ -6,7 +6,6 @@ import visible from '../svg/visibilidad.svg';
 import { color, error, colorLogin, errorLogin } from '../Components/ControlError';
 
 import Swal from 'sweetalert2';
-import clienteAxios from '../Config/axios';
 import { withRouter} from "react-router-dom";
 
 import { CRMContext} from '../Middleware/Auth';
@@ -67,7 +66,8 @@ const Formularios = ({history}) => {
 
   let handelSubmitRegister = async(e) => {
     e.preventDefault();
-    await clienteAxios.post("/user-register",userRg);
+    await Axios.post(`${envidev}/user-register`, userRg);
+    
     history.push("/")
   }
 
