@@ -1,7 +1,7 @@
 import React, {useState,useContext} from 'react'
 
 import {CRMContext} from '../../Middleware/Auth';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import Axios from 'axios';
 
 import { CRMENVProduction } from "../../Middleware/EnviPorduction";
@@ -28,23 +28,24 @@ const FormDatos = ({history}) => {
     fd.append("precio", precio);
     fd.append("categoria", categotia);
   
-    try {
-      
-      await Axios.post(`${envidev}/add-product`, fd);
-       document.querySelector(".frm").reset();  
      
-      } catch (error) {
+      await Axios.post(`${envidev}/add-product`, fd);
+      document.querySelector(".frm").reset();  
+    // try {
+     
+     
+    //   } catch (error) {
 
-        if(error){
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: `${error.response.data.message}`,
-            });
-            document.querySelector(".frm").reset();
-            return;
-        }
-      }
+    //     if(error){
+    //         Swal.fire({
+    //           icon: "error",
+    //           title: "Oops...",
+    //           text: `${error.response.data.message}`,
+    //         });
+    //         document.querySelector(".frm").reset();
+    //         return;
+    //     }
+    //   }
   };
 
   if(!auth.auth) history.push("/");
