@@ -46,6 +46,7 @@ const FormDatos = ({history}) => {
               title: "Oops...",
               text: `${error.response.err}`,
             });
+            console.log(error.response);
             document.querySelector(".frm").reset();
             return;
         }
