@@ -44,7 +44,7 @@ const FormDatos = ({history}) => {
             Swal.fire({
               icon: "error",
               title: "Oops...",
-              text: `${error.response.message}`,
+              text: `${error.response.err}`,
             });
             document.querySelector(".frm").reset();
             return;
