@@ -28,12 +28,18 @@ const FormDatos = ({history}) => {
     fd.append("precio", precio);
     fd.append("categoria", categotia);
   
-     
-      await Axios.post(`${envidev}/add-product`, fd, {
-        headers: {
-          Authorization: `Bearer ${auth.token}`,
-        },
-      });
+     try {
+       
+     await Axios.post(`${envidev}/add-product`, fd, {
+       headers: {
+         Authorization: `Bearer ${auth.token}`,
+       },
+     });
+
+     } catch (error) {
+     console.log(error.response.data.message);  
+     }
+
       document.querySelector(".frm").reset();  
    
   };
