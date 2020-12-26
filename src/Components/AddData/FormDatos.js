@@ -30,12 +30,13 @@ const FormDatos = ({history}) => {
   
      try {
        
-     await Axios.post(`${envidev}/add-product`, fd, {
+    let data = await Axios.post(`${envidev}/add-product`, fd, {
        headers: {
          Authorization: `Bearer ${auth.token}`,
        },
      });
 
+     console.log(data.data.message);
      } catch (error) {
      console.log(error.response.data.message);  
      }
