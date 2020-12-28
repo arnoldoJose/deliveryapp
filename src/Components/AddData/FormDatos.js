@@ -23,18 +23,14 @@ const FormDatos = ({history}) => {
     e.preventDefault();
     const fd = new FormData();
     
-    fd.append("imagen", img);
+    fd.append("image", img);
     fd.append("name", name);
     fd.append("precio", precio);
     fd.append("categoria", categotia);
   
      try {
        
-    let data = await Axios.post(`${envidev}/add-product`, fd, {
-       headers: {
-         Authorization: `Bearer ${auth.token}`,
-       },
-     });
+    let data = await Axios.post(`${envidev}/add-product`, fd);
 
      console.log(data.data.message);
      } catch (error) {
