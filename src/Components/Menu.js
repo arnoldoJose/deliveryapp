@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import StyledH3 from '../Style/H4Styled';
 const Menu = ({history}) => {
   
+  console.log(process.env.REACT_APP_BACKEND_URL);
 
   // useEffect(() => {
  
@@ -16,7 +17,7 @@ const Menu = ({history}) => {
   //   .then((value) =>  value.json())
   //   .then((val) => console.log(val))
   //  }
-
+  
   //  consultar();
   // }, [])
 
@@ -28,13 +29,13 @@ const Menu = ({history}) => {
     slidesToShow: 4,
     slidesToScroll: 1
   };
-
+  
     if (window.screen.width === 414) {
       settings.slidesToShow = 1;
     } else {
       settings.slidesToShow = 4;
     }
-
+    
   // const urlImg = ['https://cdn.pixabay.com/photo/2016/03/09/15/30/breakfast-1246686_1280.jpg',
   //                 'https://cdn.pixabay.com/photo/2017/03/23/19/57/asparagus-2169305_1280.jpg',
   //                 'https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_1280.jpg',
@@ -43,16 +44,16 @@ const Menu = ({history}) => {
   //                 'https://cdn.pixabay.com/photo/2014/08/06/20/32/potatoes-411975_1280.jpg',
   //                 'https://cdn.pixabay.com/photo/2015/03/26/09/39/fried-chicken-690039_1280.jpg',
   //                 'https://cdn.pixabay.com/photo/2019/03/24/14/23/bread-4077812_1280.jpg'];
-
+  
   let verifiCategorie = async(e) => {
-
+    
     let categories = e.target.parentElement.parentElement.parentElement.getAttribute("data-categories");
-
+    
     switch (categories) {
       case "food":
         history.push(`/${categories}`)
         break;
-    
+        
       case "various":
         history.push(`/${categories}`)
         break;
@@ -60,12 +61,11 @@ const Menu = ({history}) => {
       case "market":
         history.push(`/${categories}`)
         break;
-      default:
-        break;
-    }  
-    
-  }
-  console.log(process.env.REACT_APP_BACKEND_URL);
+        default:
+          break;
+        }  
+        
+      }
 
 
   return (
