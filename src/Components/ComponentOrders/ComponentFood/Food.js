@@ -4,7 +4,6 @@ import {withRouter} from 'react-router-dom';
 import CardsFood from '../ComponentFood/CardsFood';
 import Swal from 'sweetalert2';
 import Search from '../../Search';
-import Axios from 'axios';
 import { CRMENVProduction } from "../../../Middleware/EnviPorduction";
 import clienteAxios from '../../../Config/axios';
  const Food = ({location}) => {
@@ -18,7 +17,7 @@ import clienteAxios from '../../../Config/axios';
   useEffect(() => {
     //pasar a la carpeta hooks los effect
     let consultarAPI = async () => {      
-      let data = await Axios.get(`${envidev}/product/all?categoria=${categoria}`);
+      let data = await clienteAxios.get(`/product/all?categoria=${categoria}`);
 
     guardarDatos(data);
    
