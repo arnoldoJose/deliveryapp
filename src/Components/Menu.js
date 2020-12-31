@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import StyledH3 from '../Style/H4Styled';
 const Menu = ({history}) => {
   
-  console.log(process.env.REACT_APP_BACKEND_URL);
+  console.log(process.env.REACT_APP_NOD_ENV);
 
   // useEffect(() => {
  
