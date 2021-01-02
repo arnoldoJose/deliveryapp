@@ -1,5 +1,5 @@
 import React, { useEffect,useState,useContext} from 'react'
-import Spinner from './ComponentOrders/Spinner';
+import Spinner from './Spinner';
 import clienteAxios from '../Config/axios';
 import Swal from 'sweetalert2';
 import {CRMContext} from '../Middleware/Auth';
