@@ -1,5 +1,5 @@
 import React, {useEffect,useState,useContext} from 'react'
-import Spinner from '../Spinner';
+import Spinner from '../../Spinner';
 import {withRouter} from 'react-router-dom';
 import CardsFood from '../ComponentFood/CardsFood';
 import Swal from 'sweetalert2';
