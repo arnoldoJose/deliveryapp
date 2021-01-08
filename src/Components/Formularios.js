@@ -9,12 +9,11 @@ import Swal from 'sweetalert2';
 import { withRouter} from "react-router-dom";
 
 import { CRMContext} from '../Middleware/Auth';
-import Axios from 'axios';
-import { CRMENVProduction } from "../Middleware/EnviPorduction"
+import clienteAxios from '../Config/axios';
+
 const Formularios = ({history}) => {
 
   const {  guardarAuth} = useContext(CRMContext);
-  let { envidev } = useContext(CRMENVProduction);
  
   const [userLg, guardarUserLg] = useState("");
   const [userRg,  guardarUserRg] = useState("");
@@ -32,7 +31,8 @@ const Formularios = ({history}) => {
     }
         
     try {
-      let data = await Axios.post(`${envidev}/user-login`, userLg);
+      let data = await clienteAxios.post(`/user-login`,userLg)
+      
       guardarAuth({token: data.data.token,auth: true,user: data.data.user});
       
       localStorage.setItem("token", data.data.token);
@@ -66,7 +66,7 @@ const Formularios = ({history}) => {
 
   let handelSubmitRegister = async(e) => {
     e.preventDefault();
-    await Axios.post(`${envidev}/user-register`, userRg);
+   await clienteAxios.post(`/user-register`, userRg);
     
     history.push("/")
   }
