@@ -13,9 +13,8 @@ import FindProduct from './Components/FindProduct';
 import {CRMProvider} from './Middleware/Auth';
 import { EnviPorduction } from "./Middleware/EnviPorduction";
 
-
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
-
+ 
 function App() {
 
   return (
@@ -32,7 +31,7 @@ function App() {
               <Route exact path="/find-product/:id" component={FindProduct} />
               <Route exact path="/market" component={Market} />
               <Route exact path="/add-data-article" component={FormDatos} />
-              <Route exact path="/shopping-card" component={Compras} />
+              <Route exact path="/shopping-card" component={Compras} />    
             </Switch>
             <Footer />
           </div>
