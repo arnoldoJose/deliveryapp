@@ -11,7 +11,6 @@ import Market from './Components/ComponentOrders/Market';
 import Compras from './Components/Compras';
 import FindProduct from './Components/FindProduct';
 import {CRMProvider} from './Middleware/Auth';
-import { EnviPorduction } from "./Middleware/EnviPorduction";
 
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
  
@@ -20,7 +19,6 @@ function App() {
   return (
     <Router>
       <CRMProvider>
-        <EnviPorduction>
           <div className="contenedorSupremo">
             <Nav />
             <Switch>
@@ -35,7 +33,7 @@ function App() {
             </Switch>
             <Footer />
           </div>
-        </EnviPorduction>
+       
       </CRMProvider>
     </Router>
   );
