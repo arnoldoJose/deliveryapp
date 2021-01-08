@@ -1,14 +1,13 @@
-import React, {useEffect,useState,useContext} from 'react'
+import React, {useEffect,useState} from 'react'
 import Spinner from '../../Spinner';
 import {withRouter} from 'react-router-dom';
 import CardsFood from '../ComponentFood/CardsFood';
 import Swal from 'sweetalert2';
 import Search from '../../Search';
-import { CRMENVProduction } from "../../../Middleware/EnviPorduction";
 import clienteAxios from '../../../Config/axios';
  const Food = ({location}) => {
 
-  let { envidev } = useContext(CRMENVProduction);
+ 
   let [datos,guardarDatos] = useState([]);
   const [orden, guardarOrden] = useState("");
 
@@ -23,7 +22,7 @@ import clienteAxios from '../../../Config/axios';
    
   }
   consultarAPI();
-  }, [categoria,envidev]);
+  }, [categoria]);
   
   let consultarOrden = async () => {
      let res = await clienteAxios.get(`/obtener/orden?name=${orden}&categoria=${categoria}`);

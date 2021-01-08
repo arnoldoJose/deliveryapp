@@ -2,15 +2,13 @@ import React, {useState,useContext} from 'react'
 
 import {CRMContext} from '../../Middleware/Auth';
 // import Swal from 'sweetalert2';
-import Axios from 'axios';
 
-import { CRMENVProduction } from "../../Middleware/EnviPorduction";
+import clienteAxios from '../../Config/axios';
+
 
 const FormDatos = ({history}) => {
 
   const{ auth} = useContext(CRMContext);
-    let { envidev } = useContext(CRMENVProduction);
- 
 
   const [img,guardarImg] = useState("");
   const [name,saveName] = useState("");
@@ -30,7 +28,7 @@ const FormDatos = ({history}) => {
   
      try {
        
-    let data = await Axios.post(`${envidev}/add-product`, fd);
+    let data = await clienteAxios.post(`/add-product`, fd);
 
      console.log(data.data.message);
      } catch (error) {
