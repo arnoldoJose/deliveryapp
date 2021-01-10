@@ -28,11 +28,13 @@ const FormDatos = ({history}) => {
   
      try {
        
-    let data = await clienteAxios.post(`/add-product`, fd);
+    let data = await clienteAxios.post(`/add-product`, fd, {
+      headers: { Authorization: `Bearer ${auth.token}` },
+    });
 
      console.log(data.data.message);
      } catch (error) {
-     console.log(error.response.data.message);  
+     console.log(error.response.message);  
      }
 
       document.querySelector(".frm").reset();  

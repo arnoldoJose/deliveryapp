@@ -20,6 +20,8 @@ const Formularios = ({history}) => {
 
   const loginUser = async (e) => {
     e.preventDefault();
+
+    console.log(process.env.REACT_APP_NOD_ENV);
     
     if(!userLg.email || !userLg.password) {
       Swal.fire({
