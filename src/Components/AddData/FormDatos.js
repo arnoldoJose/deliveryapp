@@ -39,7 +39,7 @@ const FormDatos = ({history}) => {
    
   };
 
-  if(!auth.auth || rol !== "ADMIN_ROLE") history.push("/delivaryapp");
+  if(!auth.auth || rol !== "ADMIN_ROLE") history.push("/deliveryapp");
   
   return (
     <div className="col-12 mt-5">
