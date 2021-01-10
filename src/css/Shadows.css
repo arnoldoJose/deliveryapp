@@ -114,7 +114,13 @@
 .visible {
   display: none;
 }
+@media (max-width: 2050px) {
 
+  .navbar-expand-lg > ul {
+    position: relative;
+    left: 9em;
+  }
+}
 
 @media screen and (max-width: 540px) {
   .list-li > li{
@@ -137,4 +143,10 @@
   flex: 0 0 auto;
   width: 100%;
 }
+
+.navbar-expand-lg > ul {
+ left: 0;
 }
+
+}
+

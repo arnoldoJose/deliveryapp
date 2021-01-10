@@ -8,7 +8,7 @@ import {withRouter} from 'react-router-dom';
     width: 100%;
   `;
 const Footer = ({location}) => {
-  return (location.pathname === "/shopping-card") ? null :(
+  return (location.pathname === "/shopping-card" || location.pathname === "/food") ? null :(
     <footer className="mt-5">
       <div className="container-footer">
         <FooterStyled>
