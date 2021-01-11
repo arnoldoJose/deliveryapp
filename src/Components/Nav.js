@@ -44,7 +44,7 @@ const Nav = () => {
             />
           </div>
         </div>
-        <nav className="navbar navbar-expand-lg navbar-dark col-lg-5">
+        <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="contenedor-x d-flex justify-content-end text-center">
             <p onClick={aparece}>X</p>
           </div>

@@ -114,11 +114,22 @@
 .visible {
   display: none;
 }
+
+.navbar-expand-lg {
+  margin: auto;
+}
+
 @media (max-width: 2050px) {
 
   .navbar-expand-lg > ul {
-    position: relative;
-    left: 9em;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    
+  }
+
+  .navbar-expand-lg > ul > li > a {
+    text-decoration: none;
   }
 }
 
@@ -145,7 +156,8 @@
 }
 
 .navbar-expand-lg > ul {
- left: 0;
+ display: flex;
+ flex-direction: column;
 }
 
 }
