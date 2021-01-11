@@ -15,7 +15,7 @@ const Nav = () => {
 
     <Fragment>
       <header className=" d-flex justify-content-between">
-        <div className="menu-bar col-sm-12 col-md-11 col-lg-7 d-flex justify-content-between">
+        <div className="menu-bar col-sm-12 col-md-6 col-lg-7 d-flex justify-content-between">
           <div className="contenedorImg ml-3">
           <Link to={"/deliveryapp"} title="volver al inicio">
               <img src={scooter} height="60" width="75" alt="" />
