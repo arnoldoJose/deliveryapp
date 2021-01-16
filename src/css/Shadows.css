@@ -131,6 +131,10 @@
   .navbar-expand-lg > ul > li > a {
     text-decoration: none;
   }
+
+   .contenedorText {
+    margin-left: 10em;
+  }
 }
 
 @media screen and (max-width: 820px) {
