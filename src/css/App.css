@@ -78,8 +78,8 @@ background: linear-gradient(to right, #f7fa4b , #f7fa4b); /* W3C, IE 10+/ Edge, 
    z-index: 999;
    margin: 0px;
    position: fixed;
-   animation:animaMenu 3s;
-   -webkit-animation:animaMenu 3s;
+   animation:animaMenu 1s;
+   -webkit-animation:animaMenu 1s;
 } 
 
 .navbar-expand-lg{
