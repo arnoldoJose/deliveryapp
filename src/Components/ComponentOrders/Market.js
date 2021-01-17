@@ -29,7 +29,7 @@ const Market = ({location}) => {
 
   let consultarOrden = async () => {
    
-    let res = await clienteAxios.get(`/get-orden?name=${orden}&categoria=${categoria}`);
+    let res = await clienteAxios.get(`/obtener/orden?name=${orden}&categoria=${categoria}`);
    
     if(res.data.message){
       Swal.fire({
